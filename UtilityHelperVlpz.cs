@@ -44,4 +44,25 @@ public static class UtilityHelperVlpz
         obj.GetComponent<MeshRenderer>().material.color = color;
     }
     #endregion 
+    
+    #region Vector3
+    public static Vector3 GenerateRandomPosition2D(float xRange, float yRange)
+    {
+        float spawnPosX = Random.Range(-xRange, xRange);
+        float spawnPosY = Random.Range(-yRange, yRange);
+
+        Vector3 randomPos = new Vector3(spawnPosX, spawnPosY,0);
+        return randomPos;
+    }        
+    public static Vector3 GenerateRandomPosition(float xRange, float yRange, float zRange)
+    {
+        float spawnPosX = Random.Range(-xRange, xRange);
+        float spawnPosY = Random.Range(-yRange, yRange);
+        float spawnPosZ = Random.Range(-zRange, zRange);
+
+        Vector3 randomPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
+        return randomPos;
+    }
+
+    #endregion
 }
